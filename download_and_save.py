@@ -1,3 +1,4 @@
+import os
 from collections import deque
 
 import wikipediaapi
@@ -46,6 +47,8 @@ def download_and_save_bfs(page):
 
 
 def download():
+    os.makedirs(FOLDER_TO_DOWNLOAD, exist_ok=True)
+
     wiki = wikipediaapi.Wikipedia('MyProjectName (merlin@example.com)', 'fa')
 
     title = 'ایران'
